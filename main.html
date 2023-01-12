@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
 <style>
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
@@ -909,7 +907,17 @@ border: 1px solid #FFD36A;
     opacity: 0;
   }
 }
+
 </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/product_page.css">
     <link rel="icon" href="static/img/logo.png">
    <link
       rel="stylesheet"
@@ -944,7 +952,7 @@ border: 1px solid #FFD36A;
    <div class="home-box">
 	<button onclick="logout()"class="bx bx-log-out"> logout</button>
 Almasar-Crushes
-<a href="my-profile">
+<a href="index">
              
               	 <button class="bx bx-user" > My Profile</button> 
         </a>
@@ -1094,13 +1102,20 @@ Almasar-Crushes
 
 <script>
 
-var firebaseConfig = { apiKey: "AIzaSyAFPHSQdRugV6ngWGtPuUfSzBhS94D30hU", authDomain: "reda-7d506.firebaseapp.com", projectId: "reda-7d506", storageBucket: "reda-7d506.appspot.com", messagingSenderId: "637395019512", appId: "1:637395019512:web:1c7834e529eb90dcaf3d0d", measurementId: "G-Q7H13D1YFC" }; firebase.initializeApp(firebaseConfig); firebase.analytics();
+var firebaseConfig = { apiKey: "AIzaSyAFPHSQdRugV6ngWGtPuUfSzBhS94D30hU", 
+authDomain: "reda-7d506.firebaseapp.com", 
+projectId: "reda-7d506", 
+storageBucket: "reda-7d506.appspot.com",
+ messagingSenderId: "637395019512", 
+appId: "1:637395019512:web:1c7834e529eb90dcaf3d0d", 
+measurementId: "G-Q7H13D1YFC" }; 
+firebase.initializeApp(firebaseConfig); firebase.analytics();
 
 firebase.auth().onAuthStateChanged(function(user)
             {
                 if(!user) 
                 {
-                    window.location.href = "main";
+                    window.location.href = "index";
                 }
             });
 
@@ -1108,7 +1123,8 @@ function logout(){
     firebase.auth().signOut();
   
 
-          window.open('vip-signin');
+          window.open('index');
 } 
+
 </body>
 </html>
